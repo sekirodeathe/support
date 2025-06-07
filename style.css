@@ -1,77 +1,65 @@
 body {
-    background-color: #0d0221;
-    color: white;
-    font-family: 'Courier New', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.feedback-container {
-    background: rgba(13, 2, 33, 0.9);
-    border: 1px solid #05d9e8;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 0 20px #05d9e8;
-    width: 400px;
+#support-form, #success-message {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
 }
 
 h2 {
-    color: #05d9e8;
-    text-align: center;
-    margin-top: 0;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #05d9e8;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #05d9e8;
-    background-color: rgba(5, 217, 232, 0.1);
-    color: white;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 textarea {
-    resize: vertical;
+  height: 100px;
+  resize: none;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
+.checkbox {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.checkbox-group input {
-    width: auto;
-    margin-right: 10px;
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.submit-btn {
-    width: 100%;
-    padding: 12px;
-    background: transparent;
-    color: #05d9e8;
-    border: 2px solid #05d9e8;
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
+button:hover {
+  background-color: #45a049;
 }
 
-.submit-btn:hover {
-    background: #05d9e8;
-    color: #0d0221;
-    box-shadow: 0 0 20px #05d9e8;
+.hidden {
+  display: none;
 }
