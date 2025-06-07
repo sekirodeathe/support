@@ -1,22 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #0d0221;
+    color: white;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
+.feedback-container {
+    background: rgba(13, 2, 33, 0.9);
+    border: 1px solid #05d9e8;
+    border-radius: 5px;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px #05d9e8;
+    width: 400px;
 }
 
-h1 {
+h2 {
+    color: #05d9e8;
     text-align: center;
-    color: #333;
+    margin-top: 0;
 }
 
 .form-group {
@@ -26,39 +31,47 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    color: #05d9e8;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #05d9e8;
+    background-color: rgba(5, 217, 232, 0.1);
+    color: white;
     border-radius: 4px;
-    font-size: 16px;
+    font-family: 'Courier New', monospace;
 }
 
 textarea {
     resize: vertical;
 }
 
-button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.submit-btn {
     width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #05d9e8;
+    border: 2px solid #05d9e8;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-button:hover {
-    background: #45a049;
-}
-
-#responseMessage {
-    margin-top: 20px;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
+.submit-btn:hover {
+    background: #05d9e8;
+    color: #0d0221;
+    box-shadow: 0 0 20px #05d9e8;
 }
