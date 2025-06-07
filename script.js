@@ -30,7 +30,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     })
     .catch(error => {
         document.getElementById('responseMessage').textContent = 'Отправлено!';
-        document.getElementById('responseMessage').style.color = 'green';
+        document.getElementById('responseMessage').style.color = 'red';
     })
     .finally(() => {
         button.textContent = originalButtonText;
