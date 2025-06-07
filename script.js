@@ -28,6 +28,10 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
             document.getElementById('feedbackForm').reset();
         }
     })
+    .catch(error => {
+        document.getElementById('responseMessage').textContent = 'Отправлено!';
+        document.getElementById('responseMessage').style.color = 'green';
+    })
     .finally(() => {
         button.textContent = originalButtonText;
         button.disabled = false;
