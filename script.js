@@ -28,10 +28,6 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
             document.getElementById('feedbackForm').reset();
         }
     })
-    .catch(error => {
-        document.getElementById('responseMessage').textContent = 'Ошибка соединения';
-        document.getElementById('responseMessage').style.color = 'red';
-    })
     .finally(() => {
         button.textContent = originalButtonText;
         button.disabled = false;
