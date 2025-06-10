@@ -26,35 +26,6 @@ input, textarea {
   width: 100%;
   margin-bottom: 15px;
   padding: 10px;
-  font-size: 14px;body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-#support-form, #success-message {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  box-sizing: border-box;
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 22px;
-  text-align: center;
-}
-
-input, textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -67,11 +38,11 @@ textarea {
 }
 
 .checkbox {
+  font-size: 14px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  margin-bottom: 20px;
 }
 
 button {
