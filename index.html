@@ -10,22 +10,22 @@
   <div id="support-form">
     <h2>Техническая поддержка</h2>
     <form id="form">
-      <input type="text" placeholder="Имя" name="firstName" id="firstName" required />
+      <input type="text" placeholder="Имя" name="firstName" required />
       <input type="text" placeholder="Фамилия" name="lastName" required />
-      <input type="email" placeholder="Электронная почта" name="email" id="email" required />
+      <input type="email" placeholder="Электронная почта" name="email" required />
       <textarea placeholder="Ваше сообщение..." name="message" required></textarea>
-      <div class="checkbox">
+      <label class="checkbox">
         <input type="checkbox" id="consent" required />
-        <label for="consent">Я соглашаюсь на обработку персональных данных</label>
-      </div>
+        Я соглашаюсь на обработку персональных данных
+      </label>
       <button type="submit">Отправить</button>
     </form>
   </div>
 
-  <div id="success-message" class="hidden">
-    <h2 id="success-text">Сообщение отправлено!</h2>
-    <button id="send-again">Отправить еще</button>
-  </div>
+<div id="success-message" class="hidden">
+  <h2><span id="success-text">Спасибо! Сообщение отправлено.</span></h2>
+  <button id="send-again">Отправить еще</button>
+</div>
 
   <script src="script.js"></script>
 </body>
