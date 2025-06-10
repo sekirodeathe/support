@@ -7,8 +7,8 @@ const successText = document.getElementById('success-text');
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const firstName = document.getElementById('firstName').value.trim();
-  const email = document.getElementById('email').value.trim();
+  const firstName = document.querySelector('input[name="firstName"]').value.trim();
+  const email = document.querySelector('input[name="email"]').value.trim();
   const consent = document.getElementById('consent');
 
   if (!consent.checked) {
@@ -16,9 +16,8 @@ form.addEventListener('submit', function (e) {
     return;
   }
 
-  const userName = firstName || email;
-
-  successText.innerText = `Спасибо, ${userName}!\nСообщение отправлено!`;
+  const userLabel = firstName || email;
+  successText.textContent = `Спасибо, ${userLabel}! Сообщение отправлено.`;
 
   supportForm.classList.add('hidden');
   successMessage.classList.remove('hidden');
