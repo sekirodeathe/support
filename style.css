@@ -56,6 +56,20 @@ button {
   cursor: pointer;
 }
 
+.small-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+}
+
 button:hover {
   background-color: #45a049;
 }
