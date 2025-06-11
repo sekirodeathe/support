@@ -56,18 +56,6 @@ button {
   cursor: pointer;
 }
 
-buttonZXC {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
 button:hover {
   background-color: #45a049;
 }
