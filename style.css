@@ -40,16 +40,107 @@ textarea {
 .checkbox-wrapper {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  gap: 12px;
   margin-bottom: 20px;
-  gap: 8px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  max-width: 500px;
 }
 
 .checkbox-wrapper input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
   cursor: pointer;
-  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4a6cf7;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s;
+  background: white;
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 0 2px 2px;
+  transform: translate(-50%, -60%) rotate(-45deg) scale(0);
+  transition: transform 0.3s;
+}
+
+.checkbox-wrapper input:checked + label .custom-checkbox {
+  background: #4a6cf7;
+  border-color: #4a6cf7;
+}
+
+.checkbox-wrapper input:checked + label .custom-checkbox::after {
+  transform: translate(-50%, -60%) rotate(-45deg) scale(1);
+}
+
+.checkbox-wrapper input:focus-visible + label .custom-checkbox {
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3);
+}
+
+.checkbox-wrapper label:hover {
+  color: #1a1a1a;
+}
+
+.checkbox-wrapper label:hover .custom-checkbox {
+  border-color: #2a4af2;
+  background-color: #f0f3ff;
+}
+
+/* Анимация при клике */
+@keyframes checkboxPulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.5); }
+  100% { box-shadow: 0 0 0 8px rgba(74, 108, 247, 0); }
+}
+
+.checkbox-wrapper input:checked + label .custom-checkbox {
+  animation: checkboxPulse 0.4s ease;
+}
+
+/* Валидация */
+.checkbox-wrapper input:invalid + label .custom-checkbox {
+  border-color: #e74c3c;
+}
+
+.checkbox-wrapper input:invalid + label {
+  color: #e74c3c;
+}
+
+.checkbox-wrapper input:invalid + label .custom-checkbox {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
 }
 
 button {
