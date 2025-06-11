@@ -37,41 +37,19 @@ textarea {
   resize: none;
 }
 
-.checkbox {
-  font-size: 14px;
-  margin-bottom: 20px;
+.checkbox-wrapper {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  gap: 8px;
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox-wrapper input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  margin: 0;
-  margin-right: 6px;
-  appearance: none;
-  border: 1px solid #888;
-  border-radius: 3px;
-  background-color: #fff;
   cursor: pointer;
-  position: relative;
-}
-
-.checkbox input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 5px;
-  width: 4px;
-  height: 8px;
-  border: solid #4CAF50;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  opacity: 0;
-}
-
-.checkbox input[type="checkbox"]:checked::before {
-  opacity: 1;
+  margin: 0;
 }
 
 button {
